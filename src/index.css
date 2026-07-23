@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-950 text-cream-100 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-gold-400 text-ink-950;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold-400 text-ink-950 font-medium tracking-wide rounded-sm transition-all duration-300 hover:bg-gold-300 hover:shadow-lg hover:shadow-gold-400/20 active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border border-ink-600 text-cream-100 font-medium tracking-wide rounded-sm transition-all duration-300 hover:border-gold-400 hover:text-gold-300 active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-cream-200 font-medium tracking-wide rounded-sm transition-all duration-300 hover:text-gold-300 hover:bg-ink-800;
+  }
+  .card-luxury {
+    @apply bg-ink-900 border border-ink-700 rounded-lg overflow-hidden transition-all duration-500 hover:border-gold-400/40 hover:shadow-2xl hover:shadow-gold-400/5;
+  }
+  .input-luxury {
+    @apply w-full bg-ink-800 border border-ink-600 text-cream-100 rounded-sm px-4 py-3 outline-none transition-all duration-300 placeholder:text-ink-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30;
+  }
+  .label-luxury {
+    @apply block text-sm font-medium text-cream-200 mb-2 tracking-wide;
+  }
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl font-light text-cream-50 tracking-tight;
+  }
+  .section-subtitle {
+    @apply text-gold-400 text-sm font-sans font-medium tracking-[0.2em] uppercase mb-3;
+  }
+  .gold-divider {
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-gold-400 to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .glass {
+    background: rgba(17, 17, 19, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .glass-dark {
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #d9b97a 0%, #cda24f 50%, #a87a3a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3a42;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2964a;
+}
