@@ -7,7 +7,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/My_Website_Real/',
   resolve: {
-  resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
